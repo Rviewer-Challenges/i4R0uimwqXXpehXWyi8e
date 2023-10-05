@@ -1,0 +1,37 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "prettier",
+        "eslint-config-prettier"
+    ],
+    "rules": {
+        "no-console": 1, // Means warning
+        "prettier/prettier": 2, // Means error
+        "react/react-in-jsx-scope": 0,
+        "@typescript-eslint/no-non-null-assertion": 0
+    },
+    "settings": {
+        "react": {
+            // Tells eslint-plugin-react to automatically detect the version of React to use.
+            "version": "detect"
+        },
+        // Tells eslint how to resolve imports
+        "import/resolver": {
+            "node": {
+                "paths": ["src"]
+            }
+        }
+    }
+}
